@@ -33,9 +33,9 @@
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-lock"></i></span>
                                 <input type="password" class="form-control" id="password" name="password" placeholder="sua senha" required>
-                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                <!--<button class="btn btn-outline-secondary" type="button" id="togglePassword">
                                     <i class="bi bi-eye-slash"></i>
-                                </button>
+                                </button>-->
                             </div>
                         </div>
 
