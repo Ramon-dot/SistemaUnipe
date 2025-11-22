@@ -1,0 +1,4 @@
+/* Reutiliza o estilo do layout de login, mas garante o fundo */
+body {
+    background: #f8f9fa;
+}

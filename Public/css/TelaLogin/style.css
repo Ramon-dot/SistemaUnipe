@@ -1,0 +1,50 @@
+body {
+    background-color: #f8f9fa; /* Um cinza bem claro para o fundo */
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px; /* Largura máxima do card */
+}
+
+/* Estilo para o wrapper do ícone de cadeado */
+.lock-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #0d6efd; /* Azul primário do Bootstrap */
+    border-radius: 0.75rem; /* Bordas arredondadas */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lock-icon-wrapper i {
+    color: #ffffff;
+    font-size: 1.75rem; /* Tamanho do ícone */
+}
+
+.input-group-text {
+    background-color: #e9ecef;
+    border-right: 0;
+}
+
+.form-control {
+    border-left: 0;
+}
+
+/* Remove o foco padrão para evitar bordas duplas */
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/* Garante que o ícone do olho na senha não tenha borda esquerda */
+#togglePassword {
+    border-left: 0;
+}

@@ -1,0 +1,200 @@
+:root {
+    --sidebar-bg: #212529;
+    --sidebar-link-color: #adb5bd;
+    --sidebar-link-hover: #f8f9fa;
+    --sidebar-active-bg: #343a40;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#sidebar {
+    width: 260px;
+    min-width: 260px; /* Impede que a sidebar seja esmagada */
+    min-height: 100vh;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-link-color);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.collapsed {
+    width: 80px;
+    min-width: 80px;
+}
+
+#sidebar.collapsed .sidebar-header div,
+#sidebar.collapsed .menu-text,
+#sidebar.collapsed .sidebar-title,
+#sidebar.collapsed .dropdown-toggle::after,
+#sidebar.collapsed .sidebar-footer .menu-text,
+#sidebar.collapsed hr {
+    display: none;
+}
+
+#sidebar.collapsed .sidebar-item,
+#sidebar.collapsed .sidebar-footer a {
+    justify-content: center;
+}
+
+#sidebar.collapsed .sidebar-link,
+#sidebar.collapsed .sidebar-footer a {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#sidebar.collapsed .sidebar-link i {
+    margin-right: 0;
+}
+
+#sidebar.collapsed .submenu {
+    display: none !important; /* Força o submenu a fechar */
+}
+
+.sidebar-top {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 1rem 0;
+}
+
+.sidebar-header span {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.sidebar-header h5 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--sidebar-link-hover);
+    white-space: nowrap;
+}
+
+.sidebar-menu {
+    padding: 0 1rem;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.sidebar-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6c757d;
+    padding: 1rem 0.5rem;
+    text-transform: uppercase;
+}
+
+.sidebar-item {
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    color: var(--sidebar-link-color);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 0.5rem;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-link:hover {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar-item.active > .sidebar-link {
+    background-color: var(--sidebar-active-bg);
+    color: #fff;
+}
+
+.submenu {
+    padding-left: calc(1rem + 20px + 15px); /* padding-left + icon-width + icon-margin */
+    list-style: none;
+    background: rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.submenu .sidebar-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+#sidebar hr {
+    border-color: #495057;
+    margin: 1rem 1.5rem;
+}
+
+.sidebar-footer {
+    padding: 1rem 1.5rem;
+    margin-top: auto; /* Empurra o rodapé para baixo */
+}
+
+.sidebar-footer a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #e57373;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.sidebar-footer a:hover {
+    background-color: #343a40;
+}
+
+.sidebar-footer i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+#main-content {
+    /* Esta propriedade diz para este container "crescer" 
+       e ocupar todo o espaço que a sidebar (com 260px) não está usando. */
+    flex-grow: 1;
+    
+    /* Isso ajuda a evitar problemas de quebra de linha em layouts flex */
+    width: 1px; 
+    
+    /* Garante que o conteúdo tenha pelo menos a altura da tela */
+    min-height: 100vh;
+    
+    /* A transição suave para quando a sidebar recolher */
+    transition: all 0.3s;
+}
+
+/* A área de conteúdo (isso continua igual) */
+.content-area {
+    /* Fundo cinza claro (ou #fff se preferir branco) */
+    background-color: #f8f9fa; 
+    
+    /* Altura da tela menos o topbar. 
+       (Ajuste 61px se a altura do seu topbar.php for diferente) */
+    min-height: calc(100vh - 61px); 
+}

@@ -1,0 +1,100 @@
+/* Estilos para a página de presença */
+.table-presenca th {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-presenca tbody tr {
+    border-bottom: 1px solid #eee;
+}
+.table-presenca tbody tr:last-child {
+    border-bottom: none;
+}
+
+.aluno-nome {
+    font-weight: 600;
+    color: #000000; /* Cor solicitada */
+    font-size: 0.95rem;
+}
+
+.aluno-rgm {
+    font-size: 0.85rem;
+    color: #747474; /* Cor solicitada */
+}
+
+/* Badge para a Data */
+.badge-data {
+    background-color: #FFE1C7; /* Cor solicitada */
+    color: #995526; /* Cor solicitada */
+    padding: 0.5em 0.8em;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Badge para Faltas */
+.badge-faltas {
+    background-color: #B7E9E9; /* Cor solicitada */
+    color: #0B1219; /* Cor solicitada */
+    padding: 0.5em 0.8em;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    min-width: 60px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Botões de Ação com Gradiente */
+.btn-falta, .btn-presente {
+    color: #FFFFFF; /* Cor solicitada */
+    border: none;
+    border-radius: 20px; /* Efeito "pill" arredondado */
+    padding: 0.35em 1em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-width: 100px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-falta {
+    background-color: #FF4646; /* Cor solicitada */
+    /* Degradê suave solicitado */
+    background-image: linear-gradient(to bottom, #FF4646, #e03c3c);
+}
+.btn-falta:hover {
+    background-color: #e03c3c;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 70, 70, 0.4);
+}
+
+.btn-presente {
+    background-color: #6DBB5B; /* Cor solicitada */
+    /* Degradê suave solicitado */
+    background-image: linear-gradient(to bottom, #6DBB5B, #5a9f4c);
+}
+.btn-presente:hover {
+    background-color: #5a9f4c;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(109, 187, 91, 0.4);
+}
+
+/* Botão Salvar Presenças Fixo */
+.btn-salvar-presencas {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0B5ED7; /* Cor solicitada */
+    color: #FFFFFF; /* Cor solicitada */
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

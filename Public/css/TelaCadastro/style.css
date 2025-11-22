@@ -1,0 +1,59 @@
+body {
+            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .form-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .breadcrumb-nav {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+        .form-label {
+            font-size: 13px;
+            color: #6c757d;
+            margin-bottom: 0.25rem;
+        }
+        .form-control, .form-select {
+            font-size: 14px;
+            border-color: #d1d5db;
+            padding: 0.5rem 0.75rem;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #4285f4;
+            box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+        }
+        .btn-cadastrar {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.75rem 2rem;
+        }
+        .btn-cadastrar:hover {
+            background-color: #3367d6;
+        }
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .user-icon {
+            width: 24px;
+            height: 24px;
+            color: #6c757d;
+        }
